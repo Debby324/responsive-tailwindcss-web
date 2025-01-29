@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive E-Commerce Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body class="bg-[#fff]">
+    <!-- Navbar -->
+     <header class=" bg-[#f1f1f1]">
+    <nav class=" bg-[white] flex justify-between items-center px-[35px] shadow-md border-b border-[black]  ">
+            <div class=" py-5 text-[black] font-bold text-3xl ">
+                <a href="#home"> 
+                    <span class="text-gray-600">Nomi's</span>Jewels.
+                </a>
+            </div>
+            <div class="">
+                <ul class=" hidden lg:flex items-center space-x-6 text-black">
+                    <li class="hover:text-blue-300 cursor-pointer ease-in duration-200 "><a href="#home" ></a>Home</li>
+                    <li class="hover:text-blue-300 cursor-pointer ease-in duration-200"><a href="#features" ></a> Features</li>
+                    <li class="hover:text-blue-300 cursor-pointer ease-in duration-200"><a href="#testimonial" ></a>Testmonial</li>
+                    <li class="hover:text-blue-300 cursor-pointer ease-in duration-200"><a href="#pricing"></a>Pricing</li>
+                    <li class="hover:text-blue-300 cursor-pointer ease-in duration-200"><a href="#blog"  ></a>Blog</li>
+                    <li class="hover:text-blue-300 cursor-pointer ease-in duration-200"><a href="#contact"></a>Contact</li>
+
+               <li> <button id="cartButton" class=" relative px-4 py-2 hover:opacity-80 ease-in duration-200 bg-black capitalize text-white rounded-md text-[17px]">
+                    <i class='bx bx-cart-alt' ></i><span id="cartCount" class="absolute top-0 right-0 bg-red-600 text-xs text-white rounded-full px-1">0</span>
+                </button></li>
+                 <button id="" class=" hover:opacity-80 ease-in duration-200 relative px-4 py-2 bg-black  text-white rounded-md">
+
+            <i class="bx bx-user"></i>
+                </button>
+                
+                </ul>
+                </div>
+            </div>
+        </div>
+        <!-- mobile-screen -->
+        <button id="cartButton" class="lg:hidden  relative px-3 py-1 hover:opacity-80 ease-in duration-200 bg-black capitalize text-white rounded-md text-[17px]">
+            <i class='bx bx-cart-alt' ></i><span id="cartCount" class="absolute bottom-[22px] right-[-2px] bg-red-600 text-[10px] text-white rounded-full px-1">0</span>
+        </button>
+         <div id="hamburger" class="lg:hidden cursor-pointer z-50 ">
+            <i class="bx bx-menu text-[black] text-[28px] "></i>
+         
+         </div>
+
+         <div id="menu" class=" bg-[white] h-[79.95vh]  absolute inset-0 hidden  ">
+            <ul class="h-full grid place-items-center text-[black] py-20 ">
+                <li class="hover:text-pink-300 active:text-[pink] hover:underline cursor-pointer ease-in duration-200"><a href="#home" id="hLink"></a>Home</li>
+                <li class="hover:text-pink-300 hover:underline cursor-pointer ease-in duration-200"><a  href="#features"  id="hLink"></a> Features</li>
+                <li class="hover:text-pink-300 hover:underline cursor-pointer ease-in duration-200"><a href="#testimonial" id="hLink"></a>Testmonial</li>
+                <li class="hover:text-pink-300 hover:underline cursor-pointer ease-in duration-200"><a href="#pricing" id="hLink"></a>Pricing</li>
+                <li class="hover:text-pink-300 hover:underline cursor-pointer ease-in duration-200 "><a href="#Blog" id="hLink"></a>Blog</li>
+                <li class="hover:text-pink-300 hover:underline cursor-pointer ease-in duration-200"><a href="#contact"  id="hLink"></a>Contact</li>
+                
+                
+    
+         </div>
+         <script>
+            // Mobile menu
+            const hamburger = document.querySelector('#hamburger');
+            const menu = document.querySelector('#menu');
+            const hLink = document.querySelector('#hLink');
+            const bxMenu = document.querySelector(".bx-menu");
+            hamburger.addEventListener("click", () => {
+                menu.classList.toggle('hidden');
+                bxMenu.classList.toggle('bx-xmark')
+
+            });
+            hLink.forEach(link  => {
+                link.addEventListener("click", () => {
+                    menu.classList.toggle('hidden');
+                    bxMenu.classList.toggle('bx-xmark')
+                })
+
+            })
+         </script>
+    </nav>
+    </header>
+    <img src="" alt="" class="bg-[url('2.jpg')] h-[69vh] bg-cover border-b border-[black] lg:h-[100vh] bg-gray-50  ">
+    <main>
+        <section id="home">
+            <div class="container py-20 relative bottom-[370px] lg:bottom-[400px] lg:left-[34px] md:left-[15px] sm:left-0 ">
+              <div class="flex flex-col items-center z-20 md:flex-row">
+                <div class=" relative text-center mb-14 md:text-left md:w-1/2 md:pr-10  ">
+                    <h1 class="text-4xl lg:text-3xl  font-bold leading-9 mb-4 text-[white] lg:text-[black] hidden lg:flex">Entwined <span class="text-[white]">Jewels.</span></h1>
+                    <p class="leading-relaxed mb-10 lg:leading-6 hidden lg:flex " >Lorem, ipsum dolor sit amet consectetur<br>adipisicing elit. Ab aliquid sint odio.</p>
+                    <button id="cartButton" class=" hover:opacity-80 ease-in duration-200 relative px-5 py-3  hidden lg:flex bg-black capitalize text-white rounded-md ">Explore now
+                        </button>
+
+                </div>
+              </div>
+            </div>
+
+        </section>
+    </main>
+
+    <div class="container  relative lg:bottom-[280px] text-center  bottom-[210px]">
+       <h1 class="text-2xl  font-bold text-black">New Arrivals.</h1>
+       <p class="text-gray-600">Lorem ipsum dolor sit amet adipisicing elit. </p>
+    </div>
+
+
+    <!-- Product Grid -->
+    <div class=" relative container mx-auto px-8 py-10 lg:bottom-[240px] bg-gray-100  bottom-[220px]">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Product Item -->
+            <div class="bg-white p-4 shadow-md rounded-md  ">
+                <img src="https://lhommepty.com/cdn/shop/products/166424992884018f002f1d74f97011e898008ed7cf_thumbnail_900x_7a90e786-e6ff-400d-821e-445ee156c85f.webp?v=1677768278&width=823" alt="Product" class="w-full lg:h-[170px] h-[300px] object-cover rounded-md ">
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold ">Couple's Bracelet</h3>
+                    <p class="text-gray-500">$500.00</p>
+                    <button class="add-to-cart mt-2 px-4 py-2 bg-[pink] text-white rounded-md" data-id="1">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="bg-white p-4 shadow-md rounded-md">
+                <img src="83.jpg" alt="Product" class="w-full lg:h-[170px] object-cover rounded-md">
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold">Matching Bracelet</h3>
+                    <p class="text-gray-500">$700.00</p>
+                    <button class="add-to-cart mt-2 px-4 py-2 bg-[black] text-white rounded-md" data-id="1">Add to Cart</button>
+                </div>
+            </div>
+            <div class="bg-white p-4 shadow-md rounded-md">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAWyHkVvEYYmeltZg-UqtKb2e4Q4KD-9HiBA&s" alt="Product" class="w-full lg:h-[170px] object-cover rounded-md md:h-[370px]">
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold">Couple's Ring</h3>
+                    <p class="text-gray-500">$600.00</p>
+                    <button class="add-to-cart mt-2 px-4 py-2 bg-[brown] text-white rounded-md" data-id="1">Add to Cart</button>
+                </div>
+            </div>
+            <div class="bg-white p-4 shadow-md rounded-md">
+                <img src="neck.jpg" alt="Product" class="w-full lg:h-[170px] object-cover rounded-md md:h-[370px]">
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold">Butterfly Necklace</h3>
+                    <p class="text-gray-500">$800.00</p>
+                    <button class="add-to-cart mt-2 px-4 py-2 bg-[orange] text-white rounded-md " data-id="1">Add to Cart</button>
+                </div>
+            </div>
+            <div class="bg-white p-4 shadow-md rounded-md">
+                <img src="e0b3eee5edc6d8634be94207a3daa2c2.jpg" alt="Product" class="w-full lg:h-[170px]  object-cover rounded-md">
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold">Droping Earrings</h3>
+                    <p class="text-gray-500">$300.00</p>
+                    <button class="add-to-cart mt-2 px-4 py-2 bg-gray-300 text-white rounded-md" data-id="1">Add to Cart</button>
+                </div>
+            </div>
+            <div class="bg-white p-4 shadow-md rounded-md">
+                <img src="IMG_0630.JPG" alt="Product" class="w-full lg:h-[170px] object-cover rounded-md md:h-[390px]">
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold"> Ghost Necklace</h3>
+                    <p class="text-gray-500">$800.00</p>
+                    <button class="add-to-cart mt-2 px-4 py-2 bg-blue-300 text-white rounded-md" data-id="1">Add to Cart</button>
+                </div>
+            </div>
+            <div class="bg-white p-4 shadow-md rounded-md">
+                <img src="15cd82dcb251543f4aedef102285962f (1) copy.jpg" alt="Product" class="w-full lg:h-[170px] object-cover rounded-md">
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold">Matching Necklace</h3>
+                    <p class="text-gray-500">$700.00</p>
+                    <button class="add-to-cart mt-2 px-4 py-2 bg-black text-white rounded-md" data-id="1">Add to Cart</button>
+                </div>
+            </div>
+            <div class="bg-white p-4 shadow-md rounded-md">
+                <img src="uses.jpg" alt="Product" class="w-full lg:h-[170px] object-cover rounded-md">
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold">Pearl Earrings</h3>
+                    <p class="text-gray-500">$400.00</p>
+                    <button class="add-to-cart mt-2 px-4 py-2 bg-[#ffc400] text-white rounded-md" data-id="1">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 hidden">
+        <div class="bg-white max-w-md mx-auto mt-20 p-6 rounded-md shadow-md">
+            <h2 class="text-xl font-bold mb-4">Shopping Cart</h2>
+            <div id="cartItems" class="space-y-4">
+            </div>
+            <div class="mt-4">
+                <button id="closeCart" class="px-4 py-2 bg-gray-500 text-white rounded-md">Close</button>
+            </div>
+        </div>
+    </div>
+
+
+ <!--f2  -->
+   
+
+
+ <div class="container relative bottom-[25px]">
+       <h1 class="text-3xl font-bold text-black text-center ">Top Selling.</h1>
+       <p class="text-gray-600 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> 
+    </div>
+
+
+
+
+        
+       
+<div class="  bg-gray-50 flex items-center justify-center p-16  " >
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
+    <div class="card bg-white  text-gray-700 w-72 min-h-[10rem] shadow-lg rounded-md overflow-hidden ">
+        <img  class="w-full h-[200px] object-cover" src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/37/6239132/1.jpg?8011" alt="product">
+        <div class="p-5 flex-col gap-3">
+            <!-- badge -->
+<div class="flex items-center gap-2 ">
+<span class="badge px-3 py-1 rounded-full text-xs bg-gray-100">stock ready</span>
+<span class="badge px-3 py-1 rounded-full text-xs bg-gray-100">Official store </span>
+</div>
+
+<!-- product title -->
+<div>
+<h2 class="font-semibold text-2xl overflow-ellipsis overflow-hidden whitespace-nowrap relative  leading-snug">
+Bead Bracelet
+</h2>
+</div>
+
+        <!-- product price -->
+         <div class="gap-2 mt-1">
+            <span class="text-xl font-bold relative leading-9">
+            $300.000
+            </span>
+            <div class="flex items-center gap-2 mt-1">
+              <span class="text-sm line-through opacity-50 ">
+                $500.000
+              </span>
+              <span class="bg-[gray] px-1.5 py-0.5 rounded-md text-xs text-white   ">
+                save 30%
+              </span>
+            </div>
+         </div>
+
+            <!-- product rating -->
+
+         <span class="">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star-half' ></i>
+         </span>
+         <span class="text-xs ml-1">
+            65k reviews
+         </span>
+
+<div class="mt-5 flex">          
+         <button class="add-to-cart px-4 py-2 bg-[black] text-white rounded-md" data-id="1">Add to Cart</button>
+            <button class=""><i class="bx bxs-heart relative left-2 text-[18px] top-[2px] opacity-50  justify-center flex-grow flex bg-gray-300/60 hover:bg-gray-300/80 transition rounded-[50%] px-2 py-2 "></i></button>
+         </div>
+        </div>
+         </div> 
+
+        <div>
+            <div class="card bg-white  text-gray-700 w-72 min-h-[10rem] shadow-lg rounded-md overflow-hidden ">
+                <img  class="w-full h-[200px] object-cover" src="https://www.perimade.com/cdn/shop/products/il_fullxfull.3306285957_da1w.jpg?v=1644996531&width=720" alt="Product">
+                <div class="p-5 flex-col gap-3">
+                    <!-- badge -->
+        <div class="flex items-center gap-2 ">
+        <span class="badge px-3 py-1 rounded-full text-xs bg-gray-100">stock ready</span>
+        <span class="badge px-3 py-1 rounded-full text-xs bg-gray-100">Official store </span>
+        </div>
+        
+        <!-- product title -->
+        <div>
+        <h2 class="font-semibold text-2xl overflow-ellipsis overflow-hidden whitespace-nowrap relative  leading-snug">
+        Leather Bracelet
+        </h2>
+        </div>
+        
+                <!-- product price -->
+                 <div class="gap-2 mt-1">
+                    <span class="text-xl font-bold relative leading-9">
+                    $400.000
+                    </span>
+                    <div class="flex items-center gap-2 mt-1">
+                      <span class="text-sm line-through opacity-50 ">
+                        $500.000
+                      </span>
+                      <span class="bg-[black] px-1.5 py-0.5 rounded-md text-xs text-white   ">
+                        save 20%
+                      </span>
+                    </div>
+                 </div>
+        
+                    <!-- product rating -->
+        
+                 <span class="">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bx-star' ></i>
+                 </span>
+                 <span class="text-xs ml-1">
+                    45k reviews
+                 </span>
+        
+                 <div class="mt-5  flex">
+                   
+                 <button class="add-to-cart px-4 py-2 bg-[#efe5d9] text-black rounded-md" data-id="1">Add to Cart</button>
+                    <button class=""><i class="bx bxs-heart relative left-2 text-[18px] top-[2px] opacity-50  justify-center flex-grow flex bg-gray-300/60 hover:bg-gray-300/80 transition rounded-[50%] px-2 py-2 "></i></button>
+                 </div>
+        </div>
+        </div>
+        </div>
+
+        <div>
+            <div class="card bg-white  text-gray-700 w-72 min-h-[10rem] shadow-lg rounded-md overflow-hidden ">
+                <img  class="w-full h-[200px] object-cover" alt="Product" src="https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/10/8932283/1.jpg?3463">
+                <div class="p-5 flex-col gap-3">
+                    <!-- badge -->
+        <div class="flex items-center gap-2 ">
+        <span class="badge px-3 py-1 rounded-full text-xs bg-gray-100">stock ready</span>
+        <span class="badge px-3 py-1 rounded-full text-xs bg-gray-100">Official store </span>
+        </div>
+        
+        <!-- product title -->
+        <div>
+        <h2 class="font-semibold text-2xl overflow-ellipsis overflow-hidden whitespace-nowrap relative  leading-snug">
+        Light Bracelet
+        </h2>
+        </div>
+        
+                <!-- product price -->
+                 <div class="gap-2 mt-1">
+                    <span class="text-xl font-bold relative leading-9">
+                    $200.000
+                    </span>
+                    <div class="flex items-center gap-2 mt-1">
+                      <span class="text-sm line-through opacity-50 ">
+                        $500.000
+                      </span>
+                      <span class="bg-[#00806b] px-1.5 py-0.5 rounded-md text-xs text-white   ">
+                        save 40%
+                      </span>
+                    </div>
+                 </div>
+        
+                    <!-- product rating -->
+        
+                 <span class="">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half' ></i>
+                 </span>
+                 <span class="text-xs ml-1">
+                    105k reviews
+                 </span>
+        
+                 <div class="mt-5  flex">
+                   
+                 <button class="add-to-cart px-4 py-2 bg-[#00ccff] text-white rounded-md" data-id="1">Add to Cart</button>
+                    <button class=""><i class="bx bxs-heart relative left-2 text-[18px] top-[2px] opacity-50  justify-center flex-grow flex bg-gray-300/60 hover:bg-gray-300/80 transition rounded-[50%] px-2 py-2 "></i></button>
+                 </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+
+
+
+
+<footer class=" bg-gray-200">
+    <div class="">
+        
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 px-10 py-6  ">
+            <div class="flex flex-col gap-5 py-4">
+                <h2 class="text-2xl font-semibold">Contact</h2>
+                <ul>
+                    <li><a href="#">Phone: +234 173 456 7860</a></li>
+                    <li><a href="mailto:deborahadigolo4@gmail.com"><br>Elizabethadigolo4@gmail.com</a></li>
+                </ul>
+                <div>
+                        <input type="text" placeholder="...search" class="rounded-md p-1 bg-gray-50">
+                        <button>
+                            <i class="bx bx-search bg-gray-100  px-2 py-2 rounded-full text-black"></i>
+                    </button>
+                    
+                   
+
+                </div>
+            </div>
+            <div class="flex flex-col gap-5 py-4">
+                <h2 class="text-2xl font-semibold">Explore</h2>
+                <ul>
+                    <li>Prototyping</a></li>
+                    <li><a href="#"></a>Design systems</li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Security</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col gap-5 py-4">
+                <h2 class="text-2xl font-semibold relative right-[5px]">Getting Started</h2>
+                <ul>
+                    <li><a href="#">Browser Support</a></li>
+                    <li><a href="#"></a>Upgrade Guide</li>
+                    <li><a href="#">Tips & tricks</a></li>
+                    <li><a href="#">Dark Mode</a></li>
+                </ul>
+            </div>
+            
+        
+            
+            
+            
+    </div>
+    <div class="relative bottom-[15px]">
+    <div class="text-center ">
+        <h4 class="">&copy; 2024 Nomi's Jewels, All Rights Reserved </h4>
+    </div>
+    </div>
+</footer>
+                 
+        
+           
+
+             
+
+
+
+
+           
+               
+
+   
+ <script>
+        const cart = [];
+        const cartButton = document.getElementById('cartButton');
+        const cartModal = document.getElementById('cartModal');
+        const cartItems = document.getElementById('cartItems');
+        const closeCart = document.getElementById('closeCart');
+        const cartCount = document.getElementById('cartCount');
+
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                const productId = button.dataset.id;
+                const productName = button.parentElement.querySelector('h3').textContent;
+                const productPrice = button.parentElement.querySelector('p').textContent;
+
+                cart.push({ id: productId, name: productName, price: productPrice });
+                updateCartCount();
+                alert(`${productName} has been added to the cart.`);
+            });
+        });
+
+        cartButton.addEventListener('click', () => {
+            renderCartItems();
+            cartModal.classList.remove('hidden');
+            
+        });
+        closeCart.addEventListener('click', () => {
+            cartModal.classList.add('hidden');
+        });
+
+        function updateCartCount() {
+            cartCount.textContent = cart.length;
+        }
+
+        function renderCartItems() {
+            cartItems.innerHTML = '';
+            cart.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'flex justify-between items-center';
+                div.innerHTML = `
+                    <span>${item.name}</span>
+                    <span>${item.price}</span>
+                `;
+                cartItems.appendChild(div);
+            });
+        }
+            
+
+    
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>
